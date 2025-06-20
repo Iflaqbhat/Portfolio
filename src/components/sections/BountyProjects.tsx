@@ -1,67 +1,20 @@
 import React from "react";
-import { ExternalLink, Github } from "lucide-react";
 import SectionHeading from "../ui/SectionHeading";
 import Card from "../ui/Card";
+import { bountyProjects } from "../../services/api";
+import { ExternalLink, Github } from "lucide-react";
 
-// Define the project type for TypeScript
-interface Project {
-  id: number;
-  title: string;
-  description: string;
-  imageUrl: string;
-  techStack: string[];
-  githubUrl: string;
-  projectUrl: string;
-}
-
-// Define the projects array with Unsplash images and updated tech stacks
-const projects: Project[] = [
-  {
-    id: 1,
-    title: "WanderKashmir",
-    description: "A travel guide application showcasing the beauty of Kashmir.",
-    imageUrl:
-      "https://media.istockphoto.com/id/2164744129/photo/view-of-shikara-boats-and-houseboats-on-dal-lake-srinagar-jammu-and-kashmir-india.webp?a=1&b=1&s=612x612&w=0&k=20&c=ShJ6qFb6jpS4LY02vNL7XnitnSyYmtH-bF6ALpk89-A=", // Scenic Kashmir-like image
-    techStack: ["React", "Tailwind CSS", "JavaScript", "GitHub Pages"],
-    githubUrl: "https://github.com/Iflaqbhat/WanderKashmir.git",
-    projectUrl: "https://iflaqbhat.github.io/WanderKashmir/",
-  },
-  {
-    id: 2,
-    title: "AI Story Generator",
-    description:
-      "An AI-powered tool to generate creative stories based on user input.",
-    imageUrl:
-      "https://www.scriptbyai.com/wp-content/uploads/2023/12/Free-Fast-AI-Short-Story-Generator-768x614.webp",
-    techStack: ["React", "TypeScript", "Tailwind CSS", "AI", "Netlify"],
-    githubUrl: "https://github.com/Iflaqbhat/Ai-story-generator.git",
-    projectUrl: "https://ai-story-generator-65.netlify.app/",
-  },
-
-  {
-    id: 3,
-    title: "Weather Forecast App",
-    description:
-      "A weather application providing real-time forecasts using APIs.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80", // Weather-themed image
-    techStack: ["React", "JavaScript", "Tailwind CSS", "Weather API"],
-    githubUrl: "https://github.com/Iflaqbhat/weather-forecast-app.git",
-    projectUrl: "", // No live demo provided
-  },
-];
-
-const Projects: React.FC = () => {
+const BountyProjects: React.FC = () => {
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="bounty-projects" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          title="My Projects"
-          subtitle="Here are some of my recent projects that showcase my skills and experience."
+          title="Bounty & Hackathon Projects"
+          subtitle="Projects built for bounties, hackathons, and special challenges."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
+          {bountyProjects.map((project) => (
             <Card key={project.id} hoverable className="h-full flex flex-col">
               <div className="relative overflow-hidden h-48">
                 <img
@@ -123,4 +76,4 @@ const Projects: React.FC = () => {
   );
 };
 
-export default Projects;
+export default BountyProjects; 

@@ -43,19 +43,6 @@ const Experience: React.FC = () => {
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
                   {experience.description}
                 </p>
-                
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
-                  Key Achievements:
-                </h4>
-                
-                <ul className="space-y-2">
-                  {experience.achievements.map((achievement, i) => (
-                    <li key={i} className="flex items-start">
-                      <CheckCircle size={18} className="text-primary mt-0.5 mr-2 flex-shrink-0" />
-                      <span className="text-gray-600 dark:text-gray-400">{achievement}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
             </div>
           ))}

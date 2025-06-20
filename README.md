@@ -10,6 +10,8 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
 - Sections for projects, skills, experience, education, certifications, and contact
 - Resume download functionality
 - Contact form
+- **PostgreSQL**: For relational database management (added as a skill and sample project)
+- **Next.js**: For server-side rendering and static site generation (added as a skill and sample project)
 
 ## Setup Instructions
 
@@ -70,6 +72,8 @@ Update your contact information in `src/services/api.ts`:
 ### Projects
 
 Add or modify your projects in the `projects` array in `src/services/api.ts`.
+
+**Sample projects for PostgreSQL and Next.js have been added. Update their links and details as you build them!**
 
 ### Dark Mode
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { Menu, X, Sun, Moon, Download } from 'lucide-react';
 import Button from '../ui/Button';
+import { contactInfo } from '../../services/api';
 
 interface HeaderProps {
   darkMode: boolean;
@@ -85,7 +86,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
           <div className="hidden md:flex items-center space-x-4">
             {/* Resume Download Button */}
             <a 
-              href="https://drive.google.com/uc?export=download&id=YOUR_FILE_ID" 
+              href={contactInfo.resume} 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
@@ -153,7 +154,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
               
               {/* Resume Download Button (Mobile) */}
               <a 
-                href="https://drive.google.com/uc?export=download&id=YOUR_FILE_ID" 
+                href={contactInfo.resume} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="py-2"

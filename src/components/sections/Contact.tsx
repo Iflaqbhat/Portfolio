@@ -82,6 +82,23 @@ const Contact: React.FC = () => {
                 </div>
               </div>
 
+              {contactInfo.phone && (
+                <div className="flex items-start">
+                  <span className="text-primary mt-1 mr-4" style={{fontSize: 24}} role="img" aria-label="Phone">📞</span>
+                  <div>
+                    <h4 className="text-lg font-medium text-gray-900 dark:text-white mb-1">
+                      Phone
+                    </h4>
+                    <a
+                      href={`tel:${contactInfo.phone}`}
+                      className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                    >
+                      {contactInfo.phone}
+                    </a>
+                  </div>
+                </div>
+              )}
+
               <div>
                 <h4 className="text-lg font-medium text-gray-900 dark:text-white mb-4">
                   Social Profiles

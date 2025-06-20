@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Hero from '../components/sections/Hero';
 import Projects from '../components/sections/Projects';
+import BountyProjects from '../components/sections/BountyProjects';
 import Skills from '../components/sections/Skills';
 import Experience from '../components/sections/Experience';
 import Education from '../components/sections/Education';
@@ -16,6 +17,7 @@ const Home: React.FC = () => {
     <>
       <Hero />
       <Projects />
+      <BountyProjects />
       <Skills />
       <Experience />
       <Education />

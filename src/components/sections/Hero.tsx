@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { ArrowDown, Download } from "lucide-react";
 import { Link } from "react-scroll";
 import Button from "../ui/Button";
+import { contactInfo } from "../../services/api";
 
 const Hero: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -154,7 +155,7 @@ const Hero: React.FC = () => {
             </Link>
 
             <a
-              href="https://drive.google.com/uc?export=download&id=YOUR_FILE_ID"
+              href={contactInfo.resume}
               target="_blank"
               rel="noopener noreferrer"
             >
